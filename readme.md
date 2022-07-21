@@ -66,6 +66,18 @@ bobbleLeague
 askAway  
 knowWhatIMeme
 
+# Developer options
+
+To create an invite code for developer applications, we can use `getDevInviteCode(voiceChannelId, appName, requestOptions)` function
+
+### Valid developer applications
+
+pn  
+youtube  
+doodleCrew
+
+⚠ Developer applications may not work sometimes
+
 ## Thanks
 
 Thanks to RemyK888 for the inspiration. For more information check out his [package](https://github.com/RemyK888/discord-together) and his [github](https://github.com/RemyK888/)

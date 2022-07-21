@@ -18,9 +18,10 @@ client.on('messageCreate', async (message) => {
         const inviteCode = await inviteGenerator.getInviteCode(String(message.member.voice.channelId), "ytNew")
         message.reply(inviteCode)
     }
-    if(message.content.toLowerCase() === "!ping") {
-        message.reply('pong!')
+    if(message.content.toLowerCase() === "!ytdev") {
+        const inviteCode = await inviteGenerator.getDevInviteCode(String(message.member.voice.channelId), "youtube")
+        message.reply(inviteCode)
     }
 })
 
-client.login('your token') 
+client.login('your bot token')
