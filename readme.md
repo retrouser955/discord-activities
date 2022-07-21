@@ -1,6 +1,6 @@
 # Distivities
 
-In development. To install type `npm i https://github.com/retrouser955/discord-activities` and to use the package, check out the test folder. All the valid apps are listed in index.js under apps object
+In development. To install type `npm i discord-activities` and to use the package, check out the test folder. All the valid apps are listed in index.js under apps object
 
 ## Thanks
 
