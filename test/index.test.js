@@ -14,7 +14,7 @@ client.on('ready', () => {
 
 client.on('messageCreate', async (message) => {
     if(message.content.toLowerCase() === "!youtube") {
-        if(!message.member.voice.channel.id) return message.reply('Please join a vc first')
+        if(!message.member.voice.channelId) return message.reply('Please join a vc first')
         const inviteCode = await inviteGenerator.getInviteCode(String(message.member.voice.channelId), "ytNew")
         message.reply(inviteCode)
     }
@@ -23,4 +23,4 @@ client.on('messageCreate', async (message) => {
     }
 })
 
-client.login('your bot token') 
+client.login('your token') 

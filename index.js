@@ -64,19 +64,25 @@ module.exports = class Activities {
                 target_application_id: appId
             }
         }
-        const data = await fetch(`https://discord.com/api/v10/channels/${voiceChannelId}/invites`, {
-            body: JSON.stringify(body),
-            method: "post",
-            headers: {
-                "Content-Type": "application/json",
-                "Authorization": `Bot ${this.client.token}`
+        try {
+            const data = await fetch(`https://discord.com/api/v10/channels/${voiceChannelId}/invites`, {
+                body: JSON.stringify(body),
+                method: "post",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bot ${this.client.token}`
+                }
+            })
+            const code = await data.json()
+            if(code.code == 50013) {
+                console.warn("Discord Activities Warning: You do not have the permission to perform this action")
+                return "no code"
             }
-        })
-        const code = await data.json()
-        if(code.code == 50013) {
-            console.warn("Discord Activities Warning: You do not have the permission to perform this action")
+            return `https://discord.com/invite/${code.code}`
+        } catch (error) {
+            console.warn('There was an error while generating the invite code')
+            console.log(error)
             return "no code"
         }
-        return `https://discord.com/invite/${code.code}`
     }
 }

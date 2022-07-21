@@ -1,6 +1,6 @@
 {
   "name": "distivities",
-  "version": "0.0.2-beta",
+  "version": "0.0.3",
   "description": "Play games, Watch Youtube and more. Inspired by Remyk888's Discord Together",
   "main": "index.js",
   "scripts": {
@@ -12,5 +12,9 @@
     "axios": "^0.27.2",
     "discord.js": "^14.0.3",
     "node-fetch": "^3.2.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/retrouser955/distivities"
   }
 }
