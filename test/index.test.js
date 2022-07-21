@@ -23,4 +23,4 @@ client.on('messageCreate', async (message) => {
     }
 })
 
-client.login('your bot token')
+client.login('your bot token') 
