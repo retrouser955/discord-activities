@@ -24,10 +24,21 @@ const apps = {
 }
 
 module.exports = class Activities {
+    /**
+     * 
+     * @param {*} client Your discord client
+     */
     constructor(client) {
         if(!client) throw new Error('Discord Activities Error: A valid discord client is required to use this package')
         this.client = client
     }
+    /**
+     * 
+     * @param {string} voiceChannelId The id of the voice channel you want the activity to start in
+     * @param {string} app The name of the app you want to use
+     * @param {object | undefined} reqOptions The request options. (leave empty if you are using default options)
+     * @returns 
+     */
     async getInviteCode(voiceChannelId, app, reqOptions) {
         if(!voiceChannelId) throw new Error('Discord Activities Error: A valid discord voice channel must be provided')
         if(!app) throw new Error('Discord Activities Error: A valid app must be provided')
