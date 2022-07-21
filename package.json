@@ -1,6 +1,6 @@
 {
   "name": "distivities",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Play games, Watch Youtube and more. Inspired by Remyk888's Discord Together",
   "main": "index.js",
   "scripts": {
