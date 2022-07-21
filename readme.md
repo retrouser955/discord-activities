@@ -78,8 +78,14 @@ doodleCrew
 
 ⚠ Developer applications may not work sometimes
 
+# Using IDs to create activity code
+
+To create an invite code using custom ID, we can use `getCodeById(voiceChannelId, appID, requestOptions)` function.
+
 ## Thanks
 
 Thanks to RemyK888 for the inspiration. For more information check out his [package](https://github.com/RemyK888/discord-together) and his [github](https://github.com/RemyK888/)
 
-Note: I plan to add dev versions of these games soon
+
+
+If you encounter any problems using this package, you can join our [discord server](https://discord.gg/PpPgaCZR44)
